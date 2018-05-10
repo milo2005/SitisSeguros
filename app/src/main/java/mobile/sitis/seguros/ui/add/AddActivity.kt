@@ -2,6 +2,7 @@ package mobile.sitis.seguros.ui.add
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import mobile.sitis.seguros.R
 
 class AddActivity : AppCompatActivity() {
 

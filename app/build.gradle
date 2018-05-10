@@ -44,11 +44,11 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     //Arch
     implementation "android.arch.lifecycle:extensions:$lifecycle_version"
-    kapt "android.arch:lifecycle-compiler:$lifecycle_version"
+    kapt "android.arch.lifecycle:compiler:$lifecycle_version"
     implementation "android.arch.persistence.room:runtime:$room_version"
     kapt "android.arch.persistence.room:compiler:$room_version"
 
-    kapt "android.databinding:compiler:3.1.2"
+    kapt "com.android.databinding:compiler:3.1.2"
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
