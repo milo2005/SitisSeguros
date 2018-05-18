@@ -47,6 +47,8 @@ dependencies {
     kapt "android.arch.lifecycle:compiler:$lifecycle_version"
     implementation "android.arch.persistence.room:runtime:$room_version"
     kapt "android.arch.persistence.room:compiler:$room_version"
+    implementation "android.arch.persistence.room:rxjava2:$room_version"
+
 
     //RXJAVA2
     implementation "io.reactivex.rxjava2:rxjava:2.1.14-RC1"
