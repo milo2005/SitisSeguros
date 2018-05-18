@@ -8,7 +8,7 @@ import mobile.sitis.seguros.R
 import mobile.sitis.seguros.data.model.Seguro
 import mobile.sitis.seguros.databinding.TemplateSeguroBinding
 
-class SeguroAdapter:RecyclerView.Adapter<SeguroViewHolder>(){
+class SeguroAdapter(val onRemove:(pos:Int)->Unit):RecyclerView.Adapter<SeguroViewHolder>(){
 
     var data: List<Seguro> = emptyList()
     set(value){
@@ -28,7 +28,7 @@ class SeguroAdapter:RecyclerView.Adapter<SeguroViewHolder>(){
     }
 
     fun removeSeguro(position:Int){
-
+        onRemove(position)
     }
 
 }

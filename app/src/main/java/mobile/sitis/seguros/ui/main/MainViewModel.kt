@@ -1,5 +1,6 @@
 package mobile.sitis.seguros.ui.main
 
+import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.ViewModel
 import mobile.sitis.seguros.data.db.AppDatabase
 import mobile.sitis.seguros.data.db.SeguroDao
@@ -10,7 +11,7 @@ class MainViewModel: ViewModel(){
 
     val dao:SeguroDao = AppDatabase.db.seguroDao()
 
-    fun listSeguro():List<Seguro> = dao.getAll()
+    fun listSeguro(): LiveData<List<Seguro>> = dao.list()
 
     fun removeSeguro(seguro: Seguro, callback:(seguro:Seguro)->Unit){
         thread {
