@@ -37,7 +37,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         dis add btnIn.clicks()
-                .validateForm(this, "Datos incompletos",usr.text.toString(), pass.text.toString())
+                .flatMap { validateForm(this, "Datos incompletos",usr.text.toString(), pass.text.toString()) }
                 .subscribe{
                     viewModel.login(it[0], it[1])
                     startActivity<MainActivity>()
