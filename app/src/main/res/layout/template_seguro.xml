@@ -13,8 +13,8 @@
             name="position"
             type="int"/>
         <variable
-            name="handler"
-            type="mobile.sitis.seguros.ui.adapters.SeguroAdapter"/>
+            name="onRemove"
+            type="io.reactivex.subjects.PublishSubject"/>
     </data>
 
     <android.support.constraint.ConstraintLayout
@@ -61,7 +61,7 @@
             android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:onClick="@{()-> handler.removeSeguro(position)}"
+            android:onClick="@{()-> onRemove.onNext(seguro)}"
             app:srcCompat="@drawable/ic_clear_black_24dp" />
     </android.support.constraint.ConstraintLayout>
 </layout>

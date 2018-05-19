@@ -1,12 +1,8 @@
 package mobile.sitis.seguros.ui.login
 
-import android.arch.lifecycle.ViewModelProviders
-import android.content.Context
-import android.content.SharedPreferences
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import com.jakewharton.rxbinding2.view.clicks
-import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.activity_login.*
 import mobile.sitis.seguros.R
 import mobile.sitis.seguros.ui.main.MainActivity

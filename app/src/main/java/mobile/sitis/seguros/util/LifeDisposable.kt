@@ -21,7 +21,7 @@ class LifeDisposable(owner:LifecycleOwner):LifecycleObserver{
 
     @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
     fun dispose(){
-        dis.dispose()
+        dis.clear()
     }
 
 

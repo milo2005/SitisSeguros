@@ -1,6 +1,8 @@
 package mobile.sitis.seguros.util
 
 import android.content.Context
+import android.support.design.widget.Snackbar
+import android.view.View
 import io.reactivex.Flowable
 import io.reactivex.Maybe
 import io.reactivex.Observable
@@ -34,5 +36,13 @@ fun <T> Maybe<T>.applySchdulers():Maybe<T> = compose{ it.
 fun <T>Flowable<T>.applySchdulers():Flowable<T> = compose{ it.
         subscribeOn(Schedulers.io())
         .observeOn(AndroidSchedulers.mainThread())
+}
+
+fun <T>snackBarAction(view: View, msg:String, action:String, data:T):Observable<T> = Observable.create {emitter->
+    Snackbar.make(view, msg, Snackbar.LENGTH_SHORT)
+            .setAction(action){
+                emitter.onNext(data)
+                emitter.onComplete()
+            }.show()
 }
 
